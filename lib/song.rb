@@ -20,6 +20,7 @@ class Song
     # send artist str name to artist class
     # assign song to artist 
     # now that we have artist instance, call Artist.add_song
+    artist.add_song(self)
   end
 end
 
