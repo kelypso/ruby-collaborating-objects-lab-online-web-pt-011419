@@ -1,8 +1,8 @@
 class Song
   attr_accessor :name, :artist
   
-  def initialize()
-    
+  def initialize(name)
+    @name = name
   end
   
   def new_by_filename(filename) # parse filename for song and artist
