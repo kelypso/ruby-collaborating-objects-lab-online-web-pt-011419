@@ -10,11 +10,12 @@ class MP3Importer
   
   def files # parse filenames; how to get a list of files in a 
   # directory? only get mp3 files!
-    @files = Dir.entries(@path).select{|song| 
+    files = []
+    
   end
   
   def import # import files to song class
-    files.each{|song| Song.new_by_filename(filename)}
+    
   end
 end
 
@@ -52,10 +53,16 @@ class MP3Importer
   end
 
   def files
-    @files ||= Dir.entries(@path).select {|song| !File.directory?(song) && song.end_with?(".mp3")}
+    files = []
+    Dir.new(self.path).each do |file|
+      files << file if file.length > 4
+    end
+    files
   end
 
   def import
-    files.each {|song| Song.new_by_filename(song)}
+    self.files.each do |filename|
+      Song.new_by_filename(filename)
+    end
   end
 end
