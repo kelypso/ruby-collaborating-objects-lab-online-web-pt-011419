@@ -3,10 +3,10 @@ class Artist
   
   @all =[] # holds all artists in the class
   
-  def initialize()
+  def initialize(name)
     @name = name
     @songs = [] # holds all songs for each artist instance
-  end
+  end 
   
   def add_song(song) # adds song to song array in artist instance
     @songs << song
