@@ -12,8 +12,8 @@ class Artist
     @songs << song
   end
   
-  def save # saves artist instance
-    @@all << self
+  def save # saves artist instance to "all" array
+    @@all << self 
   end
   
   def self.all # exposes all artist instances
