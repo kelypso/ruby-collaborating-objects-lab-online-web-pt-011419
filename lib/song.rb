@@ -1,4 +1,3 @@
-=begin
 class Song
   attr_accessor :name, :artist
   
@@ -9,8 +8,7 @@ class Song
   # class method to parse filename for song and artist
   def self.new_by_filename(filename) 
     artist = filename.split(" - ")[0] # separate artist name
-    song = filename.chomp(".mp3").split(" - ")[1] 
-    # separate song name and remove .mp3
+    song = filename.chomp(".mp3").split(" - ")[1] # separate song name and remove .mp3
     new_song = self.new(song) # create a new instance of this song
     new_song.artist = artist # set this song's artist to the artist
     new_song
@@ -19,16 +17,9 @@ class Song
   def artist_name=(name)
     # takes song artist string and finds/creates artist object
     self.artist = Artist.find_or_create_by_name(artist)
-    # adds song instance to array in artist instance
-    artist.add_song(self)
+    artist.add_song(self) # adds song instance to array in artist instance
   end
 end
-=end
-
-
-
-
-
 
 
 
