@@ -38,3 +38,4 @@ end
     artist.add_song(self)
   end
 end
+=end
