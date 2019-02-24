@@ -5,7 +5,8 @@ class Song
     @name = name
   end
   
-  def new_by_filename(filename) # parse filename for song and artist
+  # parse filename for song and artist
+  def self.new_by_filename(filename) 
     artist = filename.split(" - ")[0] # separate artist name
     song = filename.split(" - ")[1] # separate song name
     new_song = self.new(song) # create a new instance of this song
