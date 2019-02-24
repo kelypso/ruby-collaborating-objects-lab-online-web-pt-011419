@@ -8,8 +8,7 @@ class MP3Importer
     @path = path
   end
   
-  def files # parse filenames; how to get a list of files in a 
-  # directory? only get mp3 files!
+  def files # collects file path, converts to string, and removes #irectory from filename
     @files = Dir.glob("#{@path}/*.mp3").collect{|file| file.gsub("#{@path}/", "")}
   end
   
