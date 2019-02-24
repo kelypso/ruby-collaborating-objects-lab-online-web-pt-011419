@@ -13,7 +13,7 @@ class MP3Importer
     
   end
   
-  def import # import files to song class?
+  def import # import files to song class
     Song.new_by_filename(name) # sends us to song class
   end
 end
