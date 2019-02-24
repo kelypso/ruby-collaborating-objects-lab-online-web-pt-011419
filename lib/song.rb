@@ -7,7 +7,7 @@ class Song
   
   
   def self.new_by_filename(filename) # class method to parse filename for song and artist
-    
+    song = filename.chomp(".mp3").split(" - ")[1] # remove .mp3 and separate song name 
     artist = filename.split(" - ")[0] # separate artist name
     new_song = self.new(song) # create a new instance of this song
     new_song.artist = artist # set this song's artist to the artist
