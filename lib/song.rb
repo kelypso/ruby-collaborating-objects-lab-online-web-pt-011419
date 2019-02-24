@@ -14,7 +14,7 @@ class Song
     # separate artist name
     new_song = self.new(song)
     # create a new instance of this song
-    new_song.artist = artist
+    new_song.artist_name = artist
     # set this song's artist to the artist
     new_song
   end
