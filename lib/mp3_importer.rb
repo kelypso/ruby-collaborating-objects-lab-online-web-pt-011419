@@ -10,8 +10,7 @@ class MP3Importer
   
   def files # parse filenames; how to get a list of files in a 
   # directory? only get mp3 files!
-    files = []
-    
+    @files = Dir.glob("#(@path)
   end
   
   def import # import files to song class
