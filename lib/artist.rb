@@ -25,9 +25,9 @@ class Artist
     if found
       found
     else
-      new_artist = self.new(artist_name)
-      new_artist.save
-      new_artist
+      new = self.new(artist_name)
+      new.save
+      new
     end
   end
 
