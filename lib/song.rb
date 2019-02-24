@@ -1,3 +1,4 @@
+=begin
 class Song
   attr_accessor :name, :artist
   
@@ -22,6 +23,7 @@ class Song
     artist.add_song(self)
   end
 end
+=end
 
 
 
@@ -31,7 +33,6 @@ end
 
 
 
-=begin
 class Song
   attr_accessor :name, :artist
 
@@ -52,4 +53,3 @@ class Song
     artist.add_song(self)
   end
 end
-=end
