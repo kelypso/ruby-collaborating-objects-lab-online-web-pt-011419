@@ -1,3 +1,63 @@
+class Artist 
+  attr_accessor :name, :songs
+  
+  @@all = [] # holds all artists in the class
+  
+  def initialize()
+    @name = name
+    @songs = [] # holds all songs for each artist instance
+  end
+  
+  def add_song(song) # adds song to song array in artist instance
+    @songs << song
+  end
+  
+  def save # saves artist instance
+    @@all << self
+  end
+  
+  def self.all # exposes all artist instances
+    @@all
+  end
+  
+  def self.find_or_create_by_name(name)
+    found = self.all.find{|artist| aritist.name == name}
+      if found
+        found
+      else
+        new = self.new(name)
+        new.save
+        new
+      end
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 class Artist
   attr_accessor :name, :songs
   @@all =[]
