@@ -8,7 +8,7 @@ class MP3Importer
     @path = path
   end
   
-  def files # parse filenames; how to get a list of files into a 
+  def files # parse filenames; how to get a list of files in a 
   # directory? only get mp3 files!
     
   end
