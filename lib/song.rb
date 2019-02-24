@@ -15,8 +15,7 @@ class Song
   end
   
   def artist_name=(name)
-    # takes song artist string and finds/creates artist object
-    self.artist = Artist.find_or_create_by_name(name)
+    self.artist = Artist.find_or_create_by_name(name) # takes song artist string and finds/creates artist object
     artist.add_song(self) # adds song instance to array in artist instance
   end
 end
